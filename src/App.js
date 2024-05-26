@@ -124,7 +124,6 @@
 // export default App;
 
 
-
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Link, Routes } from 'react-router-dom';
 import MapView from './Component/MapView';
@@ -151,36 +150,38 @@ const App = () => {
 
   return (
     <Router>
-      <div>
+      <div className="app-container">
         <header className="app-header">
-          <h1 className="header-title">Vehicle Stoppage Identification and Visualization</h1>
-          <nav>
-            <Link to="/">Home</Link>
-            <Link to="/about">About</Link>
+          <nav className="navbar">
+            <Link to="/" className="nav-link">Home</Link>
+            <Link to="/about" className="nav-link">About</Link>
           </nav>
+          <h1 className="header-title">Vehicle Stoppage Identification and Visualization</h1>
         </header>
-        <Routes>
-          <Route
-            path="/"
-            element={
-              <>
-                <div className="threshold-container">
-                  <label className="threshold-label">
-                    Stoppage Threshold (min)
-                    <input
-                      type="number"
-                      value={threshold}
-                      onChange={e => setThreshold(Number(e.target.value))}
-                      className="threshold-input"
-                    />
-                  </label>
-                </div>
-                <MapView gpsData={gpsData} stoppages={stoppages} />
-              </>
-            }
-          />
-          <Route path="/about" element={<About />} />
-        </Routes>
+        <div className="content-container">
+          <Routes>
+            <Route
+              path="/"
+              element={
+                <>
+                  <div className="threshold-container">
+                    <label className="threshold-label">
+                      Stoppage Threshold (min)
+                      <input
+                        type="number"
+                        value={threshold}
+                        onChange={e => setThreshold(Number(e.target.value))}
+                        className="threshold-input"
+                      />
+                    </label>
+                  </div>
+                  <MapView gpsData={gpsData} stoppages={stoppages} />
+                </>
+              }
+            />
+            <Route path="/about" element={<About />} />
+          </Routes>
+        </div>
       </div>
     </Router>
   );
