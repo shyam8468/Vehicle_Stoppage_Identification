@@ -66,6 +66,10 @@
 
 /* App.css */
 
+/* App.css */
+/* App.css */
+/* App.css */
+
 body {
   font-family: 'Arial', sans-serif;
   margin: 0;
@@ -73,15 +77,36 @@ body {
   box-sizing: border-box;
 }
 
-header {
-  background-color: #f8f9fa;
+.app-header {
+  background-color: #282c34;
   padding: 20px;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-header h1 {
+.header-title {
+  flex-grow: 1;
+  text-align: center;
   margin: 0;
-  color: #343a40;
+  color: white;
+}
+
+.app-header nav {
+  margin-left: auto;
+  padding-right: 30px;
+}
+
+.app-header nav a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #007bff;
+  font-weight: bold;
+}
+
+.app-header nav a:hover {
+  text-decoration: underline;
 }
 
 .threshold-container {
@@ -89,7 +114,7 @@ header h1 {
   justify-content: center;
   align-items: center;
   margin: 20px 0;
-  gap: 10px; /* Added gap for spacing between elements */
+  gap: 10px;
 }
 
 .threshold-label {
@@ -99,7 +124,7 @@ header h1 {
 }
 
 .threshold-input {
-  margin-left: 20px;
+  margin-left: 10px;
   font-size: 16px;
   padding: 8px 12px;
   border: 1px solid #ced4da;

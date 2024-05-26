@@ -1,0 +1,48 @@
+/* About.css */
+
+.about-container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  font-family: 'Arial', sans-serif;
+}
+
+.about-container h1 {
+  text-align: center;
+  color: #343a40;
+  margin-bottom: 20px;
+  font-size: 2.5em;
+}
+
+.about-container .project-image {
+  display: block;
+  max-width: 100%;
+  margin: 0 auto 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.about-container ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.about-container ul li {
+  margin-bottom: 10px;
+  font-size: 1.2em;
+  color: #495057;
+}
+
+.about-container ul li ul {
+  list-style-type: disc;
+  margin-left: 20px;
+  margin-bottom: 10px;
+}
+
+.about-container ul li ul li {
+  font-size: 1em;
+  color: #495057;
+}
